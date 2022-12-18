@@ -9,125 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/CoreAbilities_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_api_1_19_2_R0_1_SNAPSHOT_shaded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CoreAbilities.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/Ability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/CatAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ConduitAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/FeedAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/HasteAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/InvKeepAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/InvisibilityAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/LuckyBastardAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/MagnetAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ReducedCooldownAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/TeleportBowAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ToolRegenAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/VeinMinerAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/ResetCosmeticsCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/config/ConfigHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/config/ReloadConfigCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/Cosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/CosmeticsHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/Rarity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestCryObsidianCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestEndCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestFireworkCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestFlameCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestNoteCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestSmokeCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/chest/ChestSoulFlameCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/death/KillAnvilCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/death/KillLightningCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraAshCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraFireCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraFireworkCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraHeartCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraSmokeCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraWitchCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetCryObsidianCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetDragonBreathCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetFireworkCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetFlameSquareTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetInkCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetMysteryCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetSmokeCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetSoulCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetTotemCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/feet/FeetToxicCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/gui/CosmeticsCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/gui/CosmeticsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadDamageCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadEnderCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadFallingDripLavaCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadFallingDripWaterCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadFallingLavaCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadFallingWaterCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadFlameCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadHaloCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadHeartCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadNoteCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadRainCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/head/HeadSeaCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitAngryCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitLightningCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileCryObsidianTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileDrippingHoneyTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileEndTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileEntityEffectCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileFireCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileFireworkCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileGlowCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileLavaCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileLavaTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileNoteTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileScrapeCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileSlimeItemCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileSoulFireCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileSporeBlossemTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileStarCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileVillagerCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileWaterCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileWaxOffTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileWaxOnTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/projectile/ProjectileWitchTrail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillFoxCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillHAKCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillOazzCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantmentWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/commands/CustomEnchantmentsCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/AnvilHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/CutCleanEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/ExplosiveTipEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/LevelHungerUpEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/ObliterateEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/PosionProtectionEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/events/PlayerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/lootcrate/Lootcrate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/lootcrate/LootcrateCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/lootcrate/TokenCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/notes/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/notes/NotesCMD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/notes/NotesGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/util/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/util/Materials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/util/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
-    </list>
-    <list id="903dc15b-1db1-46c3-a445-69b1571e336a" name="Changes by ingoj" comment="" />
+    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,8 +86,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671320060652</updated>
-      <workItem from="1671320062484" duration="2722000" />
+      <workItem from="1671320062484" duration="5023000" />
     </task>
+    <task id="LOCAL-00001" summary="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)">
+      <created>1671323817694</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671323817694</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,5 +111,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
   </component>
 </project>
