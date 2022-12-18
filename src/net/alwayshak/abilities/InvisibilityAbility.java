@@ -13,7 +13,6 @@ public class InvisibilityAbility extends Ability {
 
     public InvisibilityAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("bbfb80cc-7d77-4608-b44f-a991b23a7dc0"));
     }
 
 

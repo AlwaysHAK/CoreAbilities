@@ -14,7 +14,6 @@ public class MagnetAbility
         extends Ability {
     public MagnetAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("c10319b9-56fc-4888-92dc-c1ad5bf9bb09"));
     }
 
     @EventHandler

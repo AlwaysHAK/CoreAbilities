@@ -56,7 +56,6 @@ public class TeleportBowAbility extends Ability {
 
         this.onCooldown = false;
         this.cooldownLeft = 0;
-        addMember(UUID.fromString("ac4cbc63-386f-4b4c-8a70-3e54caba0df9"));
     }
 
     @EventHandler

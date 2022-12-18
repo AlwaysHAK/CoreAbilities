@@ -14,7 +14,6 @@ public class ToolRegenAbility
         extends Ability {
     public ToolRegenAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("ee619d6a-bb5f-4f77-b7b8-7b4bda7ed75a"));
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Core.getPlugin(Core.class), new Runnable() {
             public void run() {

@@ -14,7 +14,6 @@ import java.util.UUID;
 public class CatAbility extends Ability {
     public CatAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("319c76cb-0c0c-4570-8abc-07a7b502cc74"));
     }
 
     @EventHandler

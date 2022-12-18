@@ -11,7 +11,6 @@ public class HasteAbility
         extends Ability {
     public HasteAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("de04afe5-1849-4d6e-a58e-438ffba11d86"));
     }
 
     @EventHandler

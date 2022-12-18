@@ -11,7 +11,6 @@ public class FeedAbility
         extends Ability {
     public FeedAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("f53c22c0-69cb-4fcb-96db-855312bca519"));
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Core.getPlugin(Core.class), new Runnable() {
             public void run() {

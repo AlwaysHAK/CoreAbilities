@@ -14,7 +14,6 @@ public class LuckyBastardAbility
         extends Ability {
     public LuckyBastardAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("71835426-f982-4137-8007-b4323a7feee8"));
     }
 
 

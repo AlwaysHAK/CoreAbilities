@@ -13,7 +13,6 @@ public class ReducedCooldownAbility
         extends Ability {
     public ReducedCooldownAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("d85b3b8b-4b2e-4a55-b1d7-0bd8bf03dc8d"));
     }
 
     @EventHandler

@@ -15,7 +15,6 @@ public class InvKeepAbility
 
     public InvKeepAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("7ec204f3-c64c-4dfd-b43b-15152c65b005"));
     }
 
 

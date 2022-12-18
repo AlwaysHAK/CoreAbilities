@@ -39,7 +39,6 @@ public class VeinMinerAbility extends Ability {
 
 
         this.xpToDrop = 0;
-        addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
 
 

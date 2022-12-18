@@ -13,7 +13,6 @@ import java.util.UUID;
 public class ConduitAbility extends Ability {
     public ConduitAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("705540d8-2ee8-41b3-9322-ae907c9a1ed8"));
     }
 
     @EventHandler
