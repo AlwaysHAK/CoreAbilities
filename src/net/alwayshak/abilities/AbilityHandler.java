@@ -17,8 +17,11 @@ public class AbilityHandler implements Listener {
     private final Core core;
     private final List<Ability> abilities = new ArrayList<>();
 
+    private static AbilityHandler handler;
+
     public AbilityHandler(Core core) {
         this.core = core;
+        handler = this;
     }
 
     public void registerAbility(Ability ability) {
@@ -30,5 +33,13 @@ public class AbilityHandler implements Listener {
     public void onKill(EntityDeathEvent e) {
         if (e.getEntity().getType() == EntityType.SHULKER)
             e.getEntity().getLocation().getWorld().dropItemNaturally(e.getEntity().getLocation(), new ItemStack(Material.SHULKER_SHELL, 1));
+    }
+
+    public List<Ability> getAbilities() {
+        return abilities;
+    }
+
+    public static AbilityHandler getHandler() {
+        return handler;
     }
 }

@@ -89,6 +89,10 @@ public class Core extends JavaPlugin {
         manager.registerAbility(new ConduitAbility("Conduit", "You get conduit when in water."));
         manager.registerAbility(new HasteAbility("Haste", "You have permanent haste!"));
         manager.registerAbility(new FeedAbility("Feed", "You get fed"));
+        manager.registerAbility(new PhaserAbility("Phaser", "You can phase through blocks"));
+        manager.registerAbility(new VayuAbility("Vayu", "i am god"));
+        manager.registerAbility(new BigBoyAbility("Big Boy", "more health and shit"));
+        manager.registerAbility(new ZeusAbility("Zeus", "god 2.0"));
     }
 
 

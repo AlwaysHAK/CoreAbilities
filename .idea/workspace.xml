@@ -9,7 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
+    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Removed Ability Assignments">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/BigBoyAbility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/PhaserAbility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/AddAbilityCMD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ToolRegenAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ToolRegenAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" afterDir="false" />
+    </list>
+    <list id="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" name="Changes by ingoj" comment="">
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/VayuAbility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ZeusAbility.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671320060652</updated>
-      <workItem from="1671320062484" duration="5023000" />
+      <workItem from="1671320062484" duration="16644000" />
     </task>
     <task id="LOCAL-00001" summary="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)">
       <created>1671323817694</created>
@@ -95,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671323817694</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removed Ability Assignments">
+      <created>1671367750979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671367750979</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +135,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
+    <MESSAGE value="Removed Ability Assignments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Ability Assignments" />
   </component>
 </project>

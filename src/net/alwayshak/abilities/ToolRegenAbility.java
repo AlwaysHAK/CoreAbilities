@@ -10,8 +10,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.UUID;
 
-public class ToolRegenAbility
-        extends Ability {
+public class ToolRegenAbility extends Ability {
     public ToolRegenAbility(String name, String description) {
         super(name, description);
 

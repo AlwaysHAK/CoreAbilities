@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
 public class CheatGUI
         implements Listener {
     private static final HashMap<Player, Integer> page = new HashMap<>();
