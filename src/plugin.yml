@@ -1,0 +1,24 @@
+name: CoreAbilities
+description: An epic description for an epic plugin
+version: 2.0
+api-version: 1.19
+author: AlwaysHAK
+main: net.alwayshak.Core
+
+commands:
+  cosmetics:
+    aliases: [c, cos]
+  customenchantments:
+    aliases: [ce, customench, customenchantment]
+  notes:
+    aliases: [coords]
+  reloadconfig:
+    aliases: [reco]
+  tokens:
+    aliases: [token]
+  lootcrate:
+    aliases: [lc, loot]
+  cheatmenu:
+    aliases: [cm, cheat, adminmenu, am]
+  resetcosmetics:
+    aliases: [rc, resetc, cosmeticreset, clearcosmetics, cc]
