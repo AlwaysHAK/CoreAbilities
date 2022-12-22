@@ -41,10 +41,12 @@ public class MinerAbility extends Ability {
     public void onBreakBlock(BlockBreakEvent e) {
         Player p = e.getPlayer();
         if(getMembers().contains(p.getUniqueId()) && toggled && p.getGameMode() == GameMode.SURVIVAL) {
-            List<Block> blocksToBeRemoved = new ArrayList<>();
+            ItemStack hand = p.getInventory().getItemInMainHand();
             Block b = e.getBlock();
             BlockFace dir = Utils.getPlayerFacing(p);
-
+            if(!Materials.can3x3Mine(b, hand))
+                return;
+            List<Block> blocksToBeRemoved = new ArrayList<>();
             if(dir == BlockFace.SOUTH || dir == BlockFace.NORTH) {
 
                 blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(-1,0,0)));
@@ -71,7 +73,20 @@ public class MinerAbility extends Ability {
                 blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(0,-1,-1)));
                 blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(0,-1,1)));
             }
-            ItemStack hand = p.getInventory().getItemInMainHand();
+            if(dir == BlockFace.DOWN || dir == BlockFace.UP) {
+
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(0,0,-1)));
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(0,0,1)));
+
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(-1,0,0)));
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(-1,0,-1)));
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(-1,0,1)));
+
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(1,0,0)));
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(1,0,-1)));
+                blocksToBeRemoved.add(b.getWorld().getBlockAt(b.getLocation().add(1,0,1)));
+
+            }
             for(Block br : blocksToBeRemoved) {
                 if(Materials.can3x3Mine(br, hand)) {
                     br.breakNaturally(hand);
