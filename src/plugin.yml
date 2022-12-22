@@ -22,3 +22,6 @@ commands:
     aliases: [cm, cheat, adminmenu, am]
   resetcosmetics:
     aliases: [rc, resetc, cosmeticreset, clearcosmetics, cc]
+  cench:
+
+

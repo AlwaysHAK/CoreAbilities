@@ -1,6 +1,7 @@
 package net.alwayshak.abilities;
 
 import net.alwayshak.Core;
+import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -35,17 +36,33 @@ public class VayuAbility extends Ability implements Listener {
         }
     }
 
+    boolean busy = false;
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         if(getMembers().contains(event.getPlayer().getUniqueId())) {
             if (event.getPlayer().getGameMode() == GameMode.SURVIVAL) {
                 Player player = event.getPlayer();
-                if (player.isOnGround()) {
-                    // Player is on the ground, so they can jump again
-                    player.setAllowFlight(true);
-                } else if (player.isFlying()) {
-                    // Player is in the air and has double jumped, so they can't jump again
+
+                if(!player.getLocation().subtract(0, 1.5, 0).getBlock().getType().isAir())
+                    canDash = true;
+                else
+                    canDash = false;
+
+                if(player.getVelocity().getY() < -0.08)
                     player.setAllowFlight(false);
+                else {
+                    if (player.isOnGround() && player.getAllowFlight() == false && !busy) {
+                        busy = true;
+                        Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getPlugin(Core.class), new Runnable() {
+                            @Override
+                            public void run() {
+                                player.setAllowFlight(true);
+                                busy = false;
+                            }
+                        }, 3l);
+                    } else if (player.isFlying()) {
+                        player.setAllowFlight(false);
+                    }
                 }
             }
         }
@@ -55,29 +72,34 @@ public class VayuAbility extends Ability implements Listener {
     public void onPlayerToggleFlight(PlayerToggleFlightEvent event) {
         if(getMembers().contains(event.getPlayer().getUniqueId())) {
             Player player = event.getPlayer();
-            if (player.getGameMode() == GameMode.SURVIVAL && !event.isFlying() && player.getVelocity().getY() > 0 && !player.isFlying() && player.getAllowFlight()) {
+            if (player.getGameMode() == GameMode.SURVIVAL && player.getVelocity().getY() > 0) {
                 // Player is in survival mode, in the air and is not already flying, and they have not used their double jump yet
                 // so allow them to double jump
-                Vector velocity = player.getVelocity();
-                velocity.setY(velocity.getY() * 1.5);
-                player.setVelocity(velocity);
                 player.setAllowFlight(false);
+                Vector vel = player.getVelocity();
+                vel.setY(vel.getY() + 0.3);
+                vel.setX(vel.getX()*2);
+                vel.setZ(vel.getZ()*2);
+                player.setVelocity(vel);
             }
         }
     }
+
+    boolean canDash = true;
 
     @EventHandler
     public void onPlayerToggleSneak(PlayerToggleSneakEvent event) {
         if(getMembers().contains(event.getPlayer().getUniqueId())) {
             Player player = event.getPlayer();
-
-            // Check if the player is in the air
-            if (!player.isOnGround()) {
-                // Check if the player is pressing the crouch button
-                if (event.isSneaking()) {
-                    // Launch the player forward with a dash
-                    Vector velocity = player.getEyeLocation().getDirection().multiply(1);
-                    player.setVelocity(velocity);
+            if (event.getPlayer().getGameMode() == GameMode.SURVIVAL && canDash) {
+                // Check if the player is in the air
+                if (!player.isOnGround()) {
+                    // Check if the player is pressing the crouch button
+                    if (event.isSneaking()) {
+                        // Launch the player forward with a dash
+                        Vector velocity = player.getEyeLocation().getDirection().multiply(1);
+                        player.setVelocity(velocity);
+                    }
                 }
             }
         }

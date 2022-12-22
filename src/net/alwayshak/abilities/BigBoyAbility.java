@@ -15,7 +15,6 @@ public class BigBoyAbility extends Ability {
 
     public BigBoyAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
 
     @EventHandler

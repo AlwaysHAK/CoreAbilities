@@ -6,7 +6,6 @@ import net.alwayshak.cheat.CheatMenuCMD;
 import net.alwayshak.cheat.ResetCosmeticsCMD;
 import net.alwayshak.config.ConfigHandler;
 import net.alwayshak.config.ReloadConfigCMD;
-import net.alwayshak.cosmetics.Cosmetic;
 import net.alwayshak.cosmetics.CosmeticsHandler;
 import net.alwayshak.cosmetics.chest.*;
 import net.alwayshak.cosmetics.death.KillAnvilCosmetic;
@@ -32,14 +31,15 @@ import net.alwayshak.notes.NotesCMD;
 import net.alwayshak.notes.NotesGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.CommandExecutor;
+import org.bukkit.NamespacedKey;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.command.TabCompleter;
 import org.bukkit.command.TabExecutor;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.lang.reflect.Field;
+import java.util.HashMap;
 
 public class Core extends JavaPlugin {
     public void onEnable() {
@@ -90,9 +90,10 @@ public class Core extends JavaPlugin {
         manager.registerAbility(new HasteAbility("Haste", "You have permanent haste!"));
         manager.registerAbility(new FeedAbility("Feed", "You get fed"));
         manager.registerAbility(new PhaserAbility("Phaser", "You can phase through blocks"));
-        manager.registerAbility(new VayuAbility("Vayu", "i am god"));
-        manager.registerAbility(new BigBoyAbility("Big Boy", "more health and shit"));
-        manager.registerAbility(new ZeusAbility("Zeus", "god 2.0"));
+        manager.registerAbility(new VayuAbility("Vayu", "You have can double jump"));
+        manager.registerAbility(new BigBoyAbility("Big Boy", "You get more health and do more damage"));
+        manager.registerAbility(new ZeusAbility("Zeus", "You strike lightning in an x radius"));
+        manager.registerAbility(new MinerAbility("Miner", "You mine in a 3x3 radius"));
     }
 
 
