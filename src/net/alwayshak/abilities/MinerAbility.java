@@ -9,6 +9,7 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
@@ -34,7 +35,7 @@ public class MinerAbility extends Ability {
         this.shift = false;
         this.toggled = true;
 
-        //addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
+        addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
 
     @EventHandler
@@ -89,6 +90,7 @@ public class MinerAbility extends Ability {
             }
             for(Block br : blocksToBeRemoved) {
                 if(Materials.can3x3Mine(br, hand)) {
+                    Materials.damageItem(hand);
                     br.breakNaturally(hand);
                 }
             }
