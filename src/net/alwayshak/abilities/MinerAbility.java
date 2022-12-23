@@ -34,7 +34,7 @@ public class MinerAbility extends Ability {
         this.shift = false;
         this.toggled = true;
 
-        addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
+        //addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
 
     @EventHandler

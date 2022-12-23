@@ -12,6 +12,7 @@
     <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Removed Ability Assignments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/MinerAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/MinerAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/PhaserAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/PhaserAbility.java" afterDir="false" />
     </list>
     <list id="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" name="Changes by ingoj" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +95,7 @@
       <workItem from="1671721949588" duration="20000" />
       <workItem from="1671726410203" duration="7385000" />
       <workItem from="1671742234242" duration="3319000" />
-      <workItem from="1671749685546" duration="1335000" />
+      <workItem from="1671749685546" duration="3596000" />
     </task>
     <task id="LOCAL-00001" summary="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)">
       <created>1671323817694</created>

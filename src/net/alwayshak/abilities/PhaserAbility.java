@@ -3,8 +3,10 @@ import net.alwayshak.Core;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
@@ -21,11 +23,15 @@ public class PhaserAbility extends Ability {
     }
 
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event) {
-        if(getMembers().contains(event.getPlayer().getUniqueId())) {
-            Player player = event.getPlayer();
-            Block block = event.getClickedBlock();
-            player.sendMessage("Member Done");
+    public void onPlayerInteract(PlayerInteractEvent e) {
+        Player p = e.getPlayer();
+        Block b = e.getClickedBlock();
+        if(b == null)
+            return;
+        if(getMembers().contains(p.getUniqueId()) && e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            BlockFace bf = e.getBlockFace();
+
+            /*player.sendMessage("Member Done");
             if(block == null)
                 return;
             if (player.isSneaking() && block.getType().isSolid()) {
@@ -43,7 +49,7 @@ public class PhaserAbility extends Ability {
                     // There are more than two solid blocks in a row, do not allow the player to phase through
                     return;
                 }
-            }
+            }*/
         }
     }
 
