@@ -156,6 +156,36 @@ public class Materials {
         return t == Material.WARPED_STEM;
     }
 
+    public static boolean isCrop(Block crop) {
+        if(crop == null)
+            return false;
+        Material mat = crop.getType();
+        if(mat == Material.WHEAT_SEEDS) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.BEETROOT_SEEDS) return true;
+        if(mat == Material.BEETROOT) return true;
+        if(mat == Material.CARROT) return true;
+        if(mat == Material.POTATO) return true;
+        if(mat == Material.MELON) return true;
+        if(mat == Material.MELON_SEEDS) return true;
+        if(mat == Material.MELON_STEM) return true;
+        if(mat == Material.PUMPKIN) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        if(mat == Material.WHEAT) return true;
+        return false;
+    }
+
     public static boolean damageItem(ItemStack i) {
         if (i == null) return false;
         if (i.getItemMeta() instanceof Damageable meta) {

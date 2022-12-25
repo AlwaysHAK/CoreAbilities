@@ -94,6 +94,7 @@ public class Core extends JavaPlugin {
         manager.registerAbility(new BigBoyAbility("Big Boy", "You get more health and do more damage"));
         manager.registerAbility(new ZeusAbility("Zeus", "You strike lightning in an x radius"));
         manager.registerAbility(new MinerAbility("Miner", "You mine in a 3x3 radius"));
+        manager.registerAbility(new ThothAbility("Thoth", "You can manipulate time"));
     }
 
 
