@@ -9,25 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added the durability drain on the MinerAbility">
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/events/EntityHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/CustomEnchants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantmentWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/EnchantmentWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/commands/CustomEnchantmentsCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/commands/CustomEnchantmentsCMD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/AnvilHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/AnvilHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/CutCleanEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/CutCleanEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/ExplosiveTipEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/ExplosiveTipEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/LevelHungerUpEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/LevelHungerUpEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/ObliterateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/ObliterateEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/events/PosionProtectionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/PosionProtectionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/events/PlayerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/events/PlayerHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added some stuff" />
     <list id="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" name="Changes by ingoj" comment="">
       <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/VexAbility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" afterDir="false" />
@@ -47,30 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="6" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="6" end1="7" start2="7" end2="7" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="9" end1="9" start2="9" end2="10" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="14" end1="14" start2="15" end2="16" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="15" end1="15" start2="17" end2="18" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="18" end1="19" start2="21" end2="21" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="22" end1="23" start2="24" end2="25" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="29" end1="30" start2="31" end2="32" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="31" end1="31" start2="33" end2="35" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="43" end1="45" start2="47" end2="60" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="50" end1="51" start2="65" end2="66" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="53" end1="55" start2="68" end2="70" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="60" end1="63" start2="75" end2="78" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="64" end1="66" start2="79" end2="88" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="71" end1="95" start2="93" end2="110" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="96" end1="97" start2="111" end2="111" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="99" end1="100" start2="113" end2="113" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="101" end1="102" start2="114" end2="115" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -141,7 +99,7 @@
       <workItem from="1671808519032" duration="238000" />
       <workItem from="1671808939241" duration="555000" />
       <workItem from="1671810390639" duration="1067000" />
-      <workItem from="1672012415295" duration="6712000" />
+      <workItem from="1672012415295" duration="6783000" />
     </task>
     <task id="LOCAL-00001" summary="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)">
       <created>1671323817694</created>
@@ -164,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671807732571</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added some stuff">
+      <created>1672019661881</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672019661881</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +150,7 @@
     <MESSAGE value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
     <MESSAGE value="Removed Ability Assignments" />
     <MESSAGE value="Added the durability drain on the MinerAbility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the durability drain on the MinerAbility" />
+    <MESSAGE value="Added some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some stuff" />
   </component>
 </project>
