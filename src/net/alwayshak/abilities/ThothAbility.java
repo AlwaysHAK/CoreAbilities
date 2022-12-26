@@ -13,7 +13,9 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
+import org.bukkit.material.Crops;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 
@@ -27,7 +29,7 @@ public class ThothAbility extends Ability {
     public ThothAbility(String name, String description) {
         super(name, description);
         addMember(UUID.fromString("ac4cbc63-386f-4b4c-8a70-3e54caba0df9"));
-        addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
+        //addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
 
     public boolean onCooldown = false;
@@ -89,35 +91,26 @@ public class ThothAbility extends Ability {
             }
         }
     }
-/*
-    private void speedCrops(Player player) {
-        //First, get the player's location
-        Location playerLocation = player.getLocation();
 
-        //Next, get the blocks in a 10 block radius around the player
-        List<Block> blocksInRadius = new ArrayList<Block>();
-        for (int x = -10; x <= 10; x++) {
-            for (int y = -10; y <= 10; y++) {
-                for (int z = -10; z <= 10; z++) {
-                    blocksInRadius.add(playerLocation.getBlock().getRelative(x, y, z));
+    @EventHandler
+    public void onPlayerMove(PlayerMoveEvent event) {
+        Player player = event.getPlayer();
+        if(getMembers().contains(player.getUniqueId())) {
+            Location playerLocation = player.getLocation();
+            int radius = 10;
+            for (int x = -radius; x <= radius; x++) {
+                for (int y = -radius; y <= radius; y++) {
+                    for (int z = -radius; z <= radius; z++) {
+                        Block block = playerLocation.add(x, y, z).getBlock();
+                        if (block.getBlockData() instanceof Ageable) {
+                            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cAGEABLE"));
+                            Ageable crop = (Ageable) block.getBlockData();
+                            crop.setAge(crop.getMaximumAge());
+                        }
+                    }
                 }
             }
         }
-
-        //Iterate through the blocks and check if they are crops
-        for (Block b : blocksInRadius) {
-            if (b.getType() == Material.WHEAT) {
-                //If the block is a crop, increase its growth level by 50%
-                int growthLevel = b.getData();
-                growthLevel = (int) Math.ceil(growthLevel * 1.5);
-                //Make sure the growth level doesn't exceed 7 (fully grown)
-                if (growthLevel > 7) {
-                    growthLevel = 7;
-                }
-                b.setBlockData((byte) growthLevel);
-            }
-        }
-
     }
-*/
+
 }

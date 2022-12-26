@@ -25,7 +25,6 @@ public class VayuAbility extends Ability implements Listener {
 
     public VayuAbility(String name, String description) {
         super(name, description);
-        addMember(UUID.fromString("ac4cbc63-386f-4b4c-8a70-3e54caba0df9"));
     }
 
     @EventHandler
