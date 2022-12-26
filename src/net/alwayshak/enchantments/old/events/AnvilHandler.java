@@ -1,6 +1,6 @@
-package net.alwayshak.enchantments.events;
+package net.alwayshak.enchantments.old.events;
 
-import net.alwayshak.enchantments.CustomEnchants;
+import net.alwayshak.enchantments.old.CustomEnchants;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;

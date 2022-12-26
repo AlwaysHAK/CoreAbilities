@@ -21,8 +21,10 @@ import net.alwayshak.cosmetics.projectile.*;
 import net.alwayshak.cosmetics.special.KillFoxCosmetic;
 import net.alwayshak.cosmetics.special.KillHAKCosmetic;
 import net.alwayshak.cosmetics.special.KillOazzCosmetic;
-import net.alwayshak.enchantments.CustomEnchants;
-import net.alwayshak.enchantments.commands.CustomEnchantmentsCMD;
+import net.alwayshak.enchantments.EnchantHandler;
+import net.alwayshak.enchantments.old.CustomEnchants;
+import net.alwayshak.enchantments.old.commands.CustomEnchantmentsCMD;
+import net.alwayshak.events.EntityHandler;
 import net.alwayshak.events.PlayerHandler;
 import net.alwayshak.lootcrate.Lootcrate;
 import net.alwayshak.lootcrate.LootcrateCMD;
@@ -31,17 +33,17 @@ import net.alwayshak.notes.NotesCMD;
 import net.alwayshak.notes.NotesGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.NamespacedKey;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabExecutor;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
-
 public class Core extends JavaPlugin {
+
+    private AbilityHandler abilityHandler;
+    private CosmeticsHandler cosmeticHandler;
+    private EnchantHandler enchantHandler;
+
     public void onEnable() {
         handleConfig();
         handleAbilities();
@@ -56,8 +58,6 @@ public class Core extends JavaPlugin {
             PlayerHandler.loadTokens(p);
         }
     }
-
-    private CosmeticsHandler cosmeticHandler;
 
     public void onDisable() {
         for (Player p : Bukkit.getOnlinePlayers()) {
@@ -75,125 +75,130 @@ public class Core extends JavaPlugin {
     }
 
     private void handleAbilities() {
-        AbilityHandler manager = new AbilityHandler(this);
-        Bukkit.getPluginManager().registerEvents(manager, this);
-        manager.registerAbility(new MagnetAbility("Magnet", "You auto-pickup items you mine."));
-        manager.registerAbility(new CatAbility("Cat", "You take half fall damage and creepers don't target you."));
-        manager.registerAbility(new VeinMinerAbility("VeinMiner", "Vein mines ores and trees."));
-        manager.registerAbility(new TeleportBowAbility("DoubleJump", "Makes you do an epic thing yay."));
-        manager.registerAbility(new ToolRegenAbility("ToolRegen", "Regens your tool every X seconds."));
-        manager.registerAbility(new LuckyBastardAbility("LuckyFuck", "You always have fortune 3 (it stacks with the fortune enchantment)."));
-        manager.registerAbility(new InvisibilityAbility("Invisibility", "Turn invisible when sneaking."));
-        manager.registerAbility(new InvKeepAbility("KeepInv", "Keeps your first slot and levels upon dying."));
-        manager.registerAbility(new ReducedCooldownAbility("ReducedCooldown", "Reduces combat cooldown."));
-        manager.registerAbility(new ConduitAbility("Conduit", "You get conduit when in water."));
-        manager.registerAbility(new HasteAbility("Haste", "You have permanent haste!"));
-        manager.registerAbility(new FeedAbility("Feed", "You get fed"));
-        manager.registerAbility(new PhaserAbility("Phaser", "You can phase through blocks"));
-        manager.registerAbility(new VayuAbility("Vayu", "You have can double jump"));
-        manager.registerAbility(new BigBoyAbility("Big Boy", "You get more health and do more damage"));
-        manager.registerAbility(new ZeusAbility("Zeus", "You strike lightning in an x radius"));
-        manager.registerAbility(new MinerAbility("Miner", "You mine in a 3x3 radius"));
-        manager.registerAbility(new ThothAbility("Thoth", "You can manipulate time"));
+        abilityHandler = new AbilityHandler(this);
+        Bukkit.getPluginManager().registerEvents(abilityHandler, this);
+        abilityHandler.registerAbility(new MagnetAbility("Magnet", "You auto-pickup items you mine."));
+        abilityHandler.registerAbility(new CatAbility("Cat", "You take half fall damage and creepers don't target you."));
+        abilityHandler.registerAbility(new VeinMinerAbility("VeinMiner", "Vein mines ores and trees."));
+        abilityHandler.registerAbility(new TeleportBowAbility("DoubleJump", "Makes you do an epic thing yay."));
+        abilityHandler.registerAbility(new ToolRegenAbility("ToolRegen", "Regens your tool every X seconds."));
+        abilityHandler.registerAbility(new LuckyBastardAbility("LuckyFuck", "You always have fortune 3 (it stacks with the fortune enchantment)."));
+        abilityHandler.registerAbility(new InvisibilityAbility("Invisibility", "Turn invisible when sneaking."));
+        abilityHandler.registerAbility(new InvKeepAbility("KeepInv", "Keeps your first slot and levels upon dying."));
+        abilityHandler.registerAbility(new ReducedCooldownAbility("ReducedCooldown", "Reduces combat cooldown."));
+        abilityHandler.registerAbility(new ConduitAbility("Conduit", "You get conduit when in water."));
+        abilityHandler.registerAbility(new HasteAbility("Haste", "You have permanent haste!"));
+        abilityHandler.registerAbility(new FeedAbility("Feed", "You get fed"));
+        abilityHandler.registerAbility(new PhaserAbility("Phaser", "You can phase through blocks"));
+        abilityHandler.registerAbility(new VayuAbility("Vayu", "You have can double jump"));
+        abilityHandler.registerAbility(new BigBoyAbility("Big Boy", "You get more health and do more damage"));
+        abilityHandler.registerAbility(new ZeusAbility("Zeus", "You strike lightning in an x radius"));
+        abilityHandler.registerAbility(new MinerAbility("Miner", "You mine in a 3x3 radius"));
+        abilityHandler.registerAbility(new ThothAbility("Thoth", "You can manipulate time"));
+        abilityHandler.registerAbility(new VexAbility("Vex", "You are a vex"));
     }
 
 
     private void handleCosmetics() {
-        this.cosmeticHandler = new CosmeticsHandler(this);
-        CosmeticsGUI cosmeticsGUI = new CosmeticsGUI(this, this.cosmeticHandler);
+        cosmeticHandler = new CosmeticsHandler(this);
+        CosmeticsGUI cosmeticsGUI = new CosmeticsGUI(this, cosmeticHandler);
         registerCommand("cosmetics", new CosmeticsCMD(cosmeticsGUI));
         Bukkit.getPluginManager().registerEvents(this.cosmeticHandler, this);
         Bukkit.getPluginManager().registerEvents(new Lootcrate(), this);
 
+        // Head
+        cosmeticHandler.registerCosmetic(new HeadFallingWaterCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadFallingLavaCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadFallingDripLavaCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadFallingDripWaterCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadFlameCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadSeaCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadHeartCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadEnderCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadDamageCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadHaloCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadNoteCosmetic());
+        cosmeticHandler.registerCosmetic(new HeadRainCosmetic());
 
-        this.cosmeticHandler.registerCosmetic(new HeadFallingWaterCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadFallingLavaCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadFallingDripLavaCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadFallingDripWaterCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadFlameCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadSeaCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadHeartCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadEnderCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadDamageCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadHaloCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadNoteCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HeadRainCosmetic());
+        // Chest
+        cosmeticHandler.registerCosmetic(new ChestFlameCosmetic());
+        cosmeticHandler.registerCosmetic(new ChestSoulFlameCosmetic());
+        cosmeticHandler.registerCosmetic(new ChestCryObsidianCosmetic());
+        cosmeticHandler.registerCosmetic(new ChestEndCosmetic());
+        cosmeticHandler.registerCosmetic(new ChestSmokeCosmetic());
+        cosmeticHandler.registerCosmetic(new ChestNoteCosmetic());
+        cosmeticHandler.registerCosmetic(new ChestFireworkCosmetic());
 
+        // Feet
+        cosmeticHandler.registerCosmetic(new FeetSmokeCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetCryObsidianCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetMysteryCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetDragonBreathCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetToxicCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetInkCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetFlameSquareTrail());
+        cosmeticHandler.registerCosmetic(new FeetTotemCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetSoulCosmetic());
+        cosmeticHandler.registerCosmetic(new FeetFireworkCosmetic());
 
-        this.cosmeticHandler.registerCosmetic(new ChestFlameCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ChestSoulFlameCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ChestCryObsidianCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ChestEndCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ChestSmokeCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ChestNoteCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ChestFireworkCosmetic());
+        // Hit
+        cosmeticHandler.registerCosmetic(new HitAngryCosmetic());
+        cosmeticHandler.registerCosmetic(new HitLightningCosmetic());
 
+        // Kill
+        cosmeticHandler.registerCosmetic(new KillLightningCosmetic());
+        cosmeticHandler.registerCosmetic(new KillAnvilCosmetic());
+        cosmeticHandler.registerCosmetic(new KillFoxCosmetic());
+        cosmeticHandler.registerCosmetic(new KillHAKCosmetic());
+        cosmeticHandler.registerCosmetic(new KillOazzCosmetic());
 
-        this.cosmeticHandler.registerCosmetic(new FeetSmokeCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetCryObsidianCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetMysteryCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetDragonBreathCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetToxicCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetInkCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetFlameSquareTrail());
-        this.cosmeticHandler.registerCosmetic(new FeetTotemCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetSoulCosmetic());
-        this.cosmeticHandler.registerCosmetic(new FeetFireworkCosmetic());
+        // Projectile
+        cosmeticHandler.registerCosmetic(new ProjectileWaterCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileLavaCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileScrapeCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileVillagerCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileCryObsidianTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileSlimeItemCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileDrippingHoneyTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileWaxOnTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileWaxOffTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileFireCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileSoulFireCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileLavaTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileEntityEffectCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileSporeBlossemTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileStarCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileGlowCosmetic());
+        cosmeticHandler.registerCosmetic(new ProjectileEndTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileWitchTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileNoteTrail());
+        cosmeticHandler.registerCosmetic(new ProjectileFireworkCosmetic());
 
-
-        this.cosmeticHandler.registerCosmetic(new HitAngryCosmetic());
-        this.cosmeticHandler.registerCosmetic(new HitLightningCosmetic());
-
-
-        this.cosmeticHandler.registerCosmetic(new KillLightningCosmetic());
-        this.cosmeticHandler.registerCosmetic(new KillAnvilCosmetic());
-        this.cosmeticHandler.registerCosmetic(new KillFoxCosmetic());
-        this.cosmeticHandler.registerCosmetic(new KillHAKCosmetic());
-        this.cosmeticHandler.registerCosmetic(new KillOazzCosmetic());
-
-
-        this.cosmeticHandler.registerCosmetic(new ProjectileWaterCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileLavaCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileScrapeCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileVillagerCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileCryObsidianTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileSlimeItemCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileDrippingHoneyTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileWaxOnTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileWaxOffTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileFireCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileSoulFireCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileLavaTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileEntityEffectCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileSporeBlossemTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileStarCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileGlowCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ProjectileEndTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileWitchTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileNoteTrail());
-        this.cosmeticHandler.registerCosmetic(new ProjectileFireworkCosmetic());
-
-
-        this.cosmeticHandler.registerCosmetic(new ElytraAshCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ElytraHeartCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ElytraFireCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ElytraWitchCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ElytraSmokeCosmetic());
-        this.cosmeticHandler.registerCosmetic(new ElytraFireworkCosmetic());
+        // Elytra
+        cosmeticHandler.registerCosmetic(new ElytraAshCosmetic());
+        cosmeticHandler.registerCosmetic(new ElytraHeartCosmetic());
+        cosmeticHandler.registerCosmetic(new ElytraFireCosmetic());
+        cosmeticHandler.registerCosmetic(new ElytraWitchCosmetic());
+        cosmeticHandler.registerCosmetic(new ElytraSmokeCosmetic());
+        cosmeticHandler.registerCosmetic(new ElytraFireworkCosmetic());
     }
 
 
     private void handleEvents() {
         Bukkit.getPluginManager().registerEvents(new PlayerHandler(), this);
+        Bukkit.getPluginManager().registerEvents(new EntityHandler(), this);
         Bukkit.getPluginManager().registerEvents(new CheatGUI(), this);
         CheatGUI.loadPages();
     }
 
     private void handleEnchantments() {
-        CustomEnchants.register(this);
+        enchantHandler = new EnchantHandler();
+
+
+        /*CustomEnchants.register(this);
         CustomEnchantmentsCMD cecmd = new CustomEnchantmentsCMD();
         getCommand("customenchantments").setExecutor(cecmd);
-        getCommand("customenchantments").setTabCompleter(cecmd);
+        getCommand("customenchantments").setTabCompleter(cecmd);*/
     }
 
     private void handleNotes() {

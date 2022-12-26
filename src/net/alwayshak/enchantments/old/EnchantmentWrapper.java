@@ -1,4 +1,4 @@
-package net.alwayshak.enchantments;
+package net.alwayshak.enchantments.old;
 
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;

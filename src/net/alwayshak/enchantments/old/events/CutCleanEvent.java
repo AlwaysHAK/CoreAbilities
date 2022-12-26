@@ -1,8 +1,7 @@
-package net.alwayshak.enchantments.events;
+package net.alwayshak.enchantments.old.events;
 
-import net.alwayshak.enchantments.CustomEnchants;
+import net.alwayshak.enchantments.old.CustomEnchants;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

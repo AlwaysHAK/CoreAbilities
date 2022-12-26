@@ -1,6 +1,6 @@
-package net.alwayshak.enchantments.commands;
+package net.alwayshak.enchantments.old.commands;
 
-import net.alwayshak.enchantments.CustomEnchants;
+import net.alwayshak.enchantments.old.CustomEnchants;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

@@ -29,12 +29,6 @@ public class AbilityHandler implements Listener {
         Bukkit.getPluginManager().registerEvents(ability, this.core);
     }
 
-    @EventHandler
-    public void onKill(EntityDeathEvent e) {
-        if (e.getEntity().getType() == EntityType.SHULKER)
-            e.getEntity().getLocation().getWorld().dropItemNaturally(e.getEntity().getLocation(), new ItemStack(Material.SHULKER_SHELL, 1));
-    }
-
     public List<Ability> getAbilities() {
         return abilities;
     }

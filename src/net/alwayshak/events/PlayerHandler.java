@@ -66,6 +66,7 @@ public class PlayerHandler
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         tokens.put(e.getPlayer(), Integer.valueOf(config.getInt("" + e.getPlayer().getUniqueId() + ".tokens")));
+        e.getPlayer().setGlowing(false);
     }
 
     @EventHandler

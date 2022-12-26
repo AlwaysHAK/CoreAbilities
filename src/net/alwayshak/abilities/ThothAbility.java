@@ -3,10 +3,11 @@ package net.alwayshak.abilities;
 import net.alwayshak.Core;
 import net.alwayshak.util.Materials;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+import org.bukkit.block.data.Ageable;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
@@ -16,11 +17,10 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class ThothAbility extends Ability{
+public class ThothAbility extends Ability {
 
     private boolean shift = false;
 
@@ -29,6 +29,8 @@ public class ThothAbility extends Ability{
         addMember(UUID.fromString("ac4cbc63-386f-4b4c-8a70-3e54caba0df9"));
         addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
+
+    public boolean onCooldown = false;
 
     @EventHandler
     public void onSneak(PlayerToggleSneakEvent e) {
@@ -41,29 +43,47 @@ public class ThothAbility extends Ability{
                     }
                 }, 10L);
             } else {
-                // Do the thingamajig
-                freezeEntities(e.getPlayer());
+                if (!onCooldown) {
+                    // Do the thingamajig
+                    freezeEntities(e.getPlayer());
+                    onCooldown = true;
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getPlugin(Core.class), new Runnable() {
+                        @Override
+                        public void run() {
+                            onCooldown = false;
+                        }
+                    }, 3600);
+                } else {
+                    e.getPlayer().sendMessage("You're on cooldown");
+                }
                 this.shift = false;
             }
         }
     }
 
-    public List<LivingEntity> frozenEntities = new ArrayList<>();
+    //public List<LivingEntity> frozenEntities = new ArrayList<>();
 
     private void freezeEntities(Player p) {
-        if(!frozenEntities.isEmpty())
-            return;
+        /*if(!frozenEntities.isEmpty())
+            return;*/
         Location loc = p.getLocation();
         World w = loc.getWorld();
         List<LivingEntity> entities = w.getLivingEntities();
         for (LivingEntity entity : entities) {
             if (entity.getLocation().distance(loc) <= 11) {
-                if(entity.getType() != EntityType.PLAYER) {
-                    if(entity.hasAI() && entity.hasGravity()) {
-                        frozenEntities.add(entity);
+                if (entity.getType() != EntityType.PLAYER) {
+                    if (entity.hasAI() && entity.hasGravity()) {
+                        //frozenEntities.add(entity);
                         entity.setAI(false);
-                        entity.setGravity(true);
-                        entity.setVelocity(new Vector(0,0,0));
+                        entity.setGravity(false);
+                        entity.setVelocity(new Vector(0, 0, 0));
+                        Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getPlugin(Core.class), new Runnable() {
+                            @Override
+                            public void run() {
+                                entity.setAI(true);
+                                entity.setGravity(true);
+                            }
+                        }, 200l);
                     }
                 }
             }

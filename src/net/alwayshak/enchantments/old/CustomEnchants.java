@@ -1,12 +1,11 @@
-package net.alwayshak.enchantments;
+package net.alwayshak.enchantments.old;
 
 import net.alwayshak.Core;
-import net.alwayshak.enchantments.events.*;
+import net.alwayshak.enchantments.old.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.enchantments.EnchantmentTarget;
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
