@@ -17,10 +17,11 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.material.Crops;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.util.Vector;
+import org.checkerframework.checker.units.qual.C;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class ThothAbility extends Ability {
 
@@ -30,6 +31,7 @@ public class ThothAbility extends Ability {
         super(name, description);
         addMember(UUID.fromString("ac4cbc63-386f-4b4c-8a70-3e54caba0df9"));
         //addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
+
     }
 
     public boolean onCooldown = false;
@@ -91,26 +93,23 @@ public class ThothAbility extends Ability {
             }
         }
     }
-
+    /*
+    //Brawl Stars Max Ability
     @EventHandler
-    public void onPlayerMove(PlayerMoveEvent event) {
+    public void onPlayerCrouch(PlayerToggleSneakEvent event) {
         Player player = event.getPlayer();
-        if(getMembers().contains(player.getUniqueId())) {
-            Location playerLocation = player.getLocation();
-            int radius = 10;
-            for (int x = -radius; x <= radius; x++) {
-                for (int y = -radius; y <= radius; y++) {
-                    for (int z = -radius; z <= radius; z++) {
-                        Block block = playerLocation.add(x, y, z).getBlock();
-                        if (block.getBlockData() instanceof Ageable) {
-                            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cAGEABLE"));
-                            Ageable crop = (Ageable) block.getBlockData();
-                            crop.setAge(crop.getMaximumAge());
-                        }
-                    }
+        if (!player.isOnGround()) {
+            int taskId = Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getPlugin(Core.class), new Runnable() {
+                Location previousLocation = player.getLocation();
+                @Override
+                public void run() {
+                    Location currentLocation = player.getLocation();
+                    player.teleport(previousLocation);
+                    previousLocation = currentLocation;
                 }
-            }
+            }, 200L);
         }
     }
 
+     */
 }

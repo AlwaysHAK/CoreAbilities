@@ -2,6 +2,7 @@ package net.alwayshak.cheat;
 
 import net.alwayshak.cosmetics.Cosmetic;
 import net.alwayshak.cosmetics.CosmeticsHandler;
+import net.alwayshak.cosmetics.gui.CosmeticsGUI;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -21,14 +22,7 @@ public class CheatMenuCMD implements TabExecutor {
 
     public boolean onCommand(CommandSender s, Command cmd, String arg, String[] args) {
         if (s instanceof Player p) {
-            if (args.length == 0) {
-                Player player = (Player) s;
-                for (Cosmetic cosmetic : CosmeticsHandler.instance.getLockedCosmetics(player))
-                    cosmetic.addUnlocked(player);
-                player.sendMessage("" + ChatColor.GRAY + "Unlocked all cosmetics.");
-                return true;
-            }
-            CheatGUI.openAllCosmetics(p, Integer.parseInt(args[0]));
+            this.cheatGUI.open(p);
         }
         return true;
     }
