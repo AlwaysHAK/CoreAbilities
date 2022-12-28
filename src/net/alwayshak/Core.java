@@ -9,6 +9,7 @@ import net.alwayshak.config.ReloadConfigCMD;
 import net.alwayshak.cosmetics.CosmeticsHandler;
 import net.alwayshak.cosmetics.chest.*;
 import net.alwayshak.cosmetics.death.KillAnvilCosmetic;
+import net.alwayshak.cosmetics.death.KillExplosionCosmetic;
 import net.alwayshak.cosmetics.death.KillLightningCosmetic;
 import net.alwayshak.cosmetics.elytra.*;
 import net.alwayshak.cosmetics.feet.*;
@@ -16,6 +17,7 @@ import net.alwayshak.cosmetics.gui.CosmeticsCMD;
 import net.alwayshak.cosmetics.gui.CosmeticsGUI;
 import net.alwayshak.cosmetics.head.*;
 import net.alwayshak.cosmetics.hit.HitAngryCosmetic;
+import net.alwayshak.cosmetics.hit.HitBubblesCosmetic;
 import net.alwayshak.cosmetics.hit.HitLightningCosmetic;
 import net.alwayshak.cosmetics.projectile.*;
 import net.alwayshak.cosmetics.special.KillFoxCosmetic;
@@ -142,6 +144,7 @@ public class Core extends JavaPlugin {
         // Hit
         cosmeticHandler.registerCosmetic(new HitAngryCosmetic());
         cosmeticHandler.registerCosmetic(new HitLightningCosmetic());
+        cosmeticHandler.registerCosmetic(new HitBubblesCosmetic());
 
         // Kill
         cosmeticHandler.registerCosmetic(new KillLightningCosmetic());
@@ -149,6 +152,7 @@ public class Core extends JavaPlugin {
         cosmeticHandler.registerCosmetic(new KillFoxCosmetic());
         cosmeticHandler.registerCosmetic(new KillHAKCosmetic());
         cosmeticHandler.registerCosmetic(new KillOazzCosmetic());
+        cosmeticHandler.registerCosmetic(new KillExplosionCosmetic());
 
         // Projectile
         cosmeticHandler.registerCosmetic(new ProjectileWaterCosmetic());
@@ -179,6 +183,7 @@ public class Core extends JavaPlugin {
         cosmeticHandler.registerCosmetic(new ElytraWitchCosmetic());
         cosmeticHandler.registerCosmetic(new ElytraSmokeCosmetic());
         cosmeticHandler.registerCosmetic(new ElytraFireworkCosmetic());
+        cosmeticHandler.registerCosmetic(new ElytraEndCosmetic());
     }
 
 
