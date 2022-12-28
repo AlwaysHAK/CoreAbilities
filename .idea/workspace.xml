@@ -9,11 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added some stuff" />
-    <list id="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" name="Changes by ingoj" comment="">
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/VexAbility.java" afterDir="false" />
+    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added some stuff">
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/CutCleanEnchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/CustomEnchants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/EnchantmentWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/commands/CustomEnchantmentsCMD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/AnvilHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/CutCleanEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/ExplosiveTipEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/LevelHungerUpEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/ObliterateEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/PosionProtectionEvent.java" beforeDir="false" />
+    </list>
+    <list id="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" name="Changes by ingoj" comment="Did some stuff again">
       <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/VayuAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/VayuAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitAngryCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitAngryCosmetic.java" afterDir="false" />
+    </list>
+    <list id="72892b11-6ca1-4b6b-8003-0c15e2b60575" name="Changes by troyh" comment="">
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/death/KillExplosionCosmetic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraEndCosmetic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitBubblesCosmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +52,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="13" end1="15" start2="14" end2="22" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="17" end1="25" start2="24" end2="25" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="34" end1="34" start2="34" end2="45" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/net/alwayshak/Core.java">
+      <ranges>
+        <range start1="11" end1="11" start2="11" end2="12" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
+        <range start1="18" end1="18" start2="19" end2="20" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
+        <range start1="24" end1="26" start2="26" end2="26" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="44" end1="45" start2="44" end2="44" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="50" end1="50" start2="49" end2="50" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="70" end1="71" start2="70" end2="71" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="146" end1="146" start2="146" end2="147" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
+        <range start1="153" end1="153" start2="154" end2="155" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
+        <range start1="183" end1="183" start2="185" end2="186" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
+        <range start1="190" end1="191" start2="193" end2="193" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="194" end1="201" start2="196" end2="197" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,6 +109,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hedze\Documents\GitHub\CoreAbilities\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="net.alwayshak.enchantments.old.events" />
+      <recent name="net.alwayshak.enchantments" />
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.Unnamed">
@@ -100,6 +152,15 @@
       <workItem from="1671808939241" duration="555000" />
       <workItem from="1671810390639" duration="1067000" />
       <workItem from="1672012415295" duration="6783000" />
+      <workItem from="1672019689343" duration="75000" />
+      <workItem from="1672056697209" duration="7044000" />
+      <workItem from="1672166130435" duration="410000" />
+      <workItem from="1672171809441" duration="4249000" />
+      <workItem from="1672180948022" duration="3774000" />
+      <workItem from="1672194057146" duration="685000" />
+      <workItem from="1672194968298" duration="536000" />
+      <workItem from="1672195561733" duration="122000" />
+      <workItem from="1672195719130" duration="474000" />
     </task>
     <task id="LOCAL-00001" summary="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)">
       <created>1671323817694</created>
@@ -129,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672019661881</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Did some stuff again">
+      <created>1672019745973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672019745973</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added some stuff">
+      <created>1672019751592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672019751592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +225,7 @@
     <MESSAGE value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
     <MESSAGE value="Removed Ability Assignments" />
     <MESSAGE value="Added the durability drain on the MinerAbility" />
+    <MESSAGE value="Did some stuff again" />
     <MESSAGE value="Added some stuff" />
     <option name="LAST_COMMIT_MESSAGE" value="Added some stuff" />
   </component>

@@ -22,8 +22,6 @@ import net.alwayshak.cosmetics.special.KillFoxCosmetic;
 import net.alwayshak.cosmetics.special.KillHAKCosmetic;
 import net.alwayshak.cosmetics.special.KillOazzCosmetic;
 import net.alwayshak.enchantments.EnchantHandler;
-import net.alwayshak.enchantments.old.CustomEnchants;
-import net.alwayshak.enchantments.old.commands.CustomEnchantmentsCMD;
 import net.alwayshak.events.EntityHandler;
 import net.alwayshak.events.PlayerHandler;
 import net.alwayshak.lootcrate.Lootcrate;
@@ -42,12 +40,12 @@ public class Core extends JavaPlugin {
 
     private AbilityHandler abilityHandler;
     private CosmeticsHandler cosmeticHandler;
-    private EnchantHandler enchantHandler;
 
     public void onEnable() {
         handleConfig();
         handleAbilities();
         handleCosmetics();
+        handleEnchantments();
         handleCommands();
         handleNotes();
         handleEvents();
@@ -68,7 +66,7 @@ public class Core extends JavaPlugin {
 
     private void handleCommands() {
         registerCommand("reloadconfig", new ReloadConfigCMD(), "coreabilities.reload");
-        registerCommand("cheatmenu", new CheatMenuCMD(), "coreabilities.cheatmenu");
+        registerCommand("cheatmenu", new CheatMenuCMD(new CheatGUI()), "coreabilities.cheatmenu");
         registerCommand("tokens", new TokenCMD());
         registerCommand("lootcrate", new LootcrateCMD());
         registerCommand("resetcosmetics", new ResetCosmeticsCMD());
@@ -188,17 +186,10 @@ public class Core extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new PlayerHandler(), this);
         Bukkit.getPluginManager().registerEvents(new EntityHandler(), this);
         Bukkit.getPluginManager().registerEvents(new CheatGUI(), this);
-        CheatGUI.loadPages();
     }
 
     private void handleEnchantments() {
-        enchantHandler = new EnchantHandler();
-
-
-        /*CustomEnchants.register(this);
-        CustomEnchantmentsCMD cecmd = new CustomEnchantmentsCMD();
-        getCommand("customenchantments").setExecutor(cecmd);
-        getCommand("customenchantments").setTabCompleter(cecmd);*/
+        //enchantHandler = new EnchantHandler();
     }
 
     private void handleNotes() {

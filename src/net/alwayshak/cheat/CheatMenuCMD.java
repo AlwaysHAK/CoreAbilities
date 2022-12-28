@@ -11,8 +11,14 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheatMenuCMD
-        implements TabExecutor {
+public class CheatMenuCMD implements TabExecutor {
+
+    private final CheatGUI cheatGUI;
+
+    public CheatMenuCMD(CheatGUI gui) {
+        this.cheatGUI = gui;
+    }
+
     public boolean onCommand(CommandSender s, Command cmd, String arg, String[] args) {
         if (s instanceof Player p) {
             if (args.length == 0) {
@@ -32,5 +38,16 @@ public class CheatMenuCMD
         return tab;
     }
 }
+
+            /*
+            if (args.length == 0) {
+                Player player = (Player) s;
+                for (Cosmetic cosmetic : CosmeticsHandler.instance.getLockedCosmetics(player))
+                    cosmetic.addUnlocked(player);
+                player.sendMessage("" + ChatColor.GRAY + "Unlocked all cosmetics.");
+                return true;
+            }
+            CheatGUI.openAllCosmetics(p, Integer.parseInt(args[0]));
+            */
 
 
