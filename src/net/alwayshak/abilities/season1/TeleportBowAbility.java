@@ -1,6 +1,7 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
 import net.alwayshak.Core;
+import net.alwayshak.abilities.Ability;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -16,8 +17,6 @@ import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.plugin.Plugin;
-
-import java.util.UUID;
 
 public class TeleportBowAbility extends Ability {
     private boolean shift;

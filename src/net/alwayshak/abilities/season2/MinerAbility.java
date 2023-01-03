@@ -1,6 +1,8 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season2;
 
 import net.alwayshak.Core;
+import net.alwayshak.abilities.Ability;
+import net.alwayshak.enchantments.enchants.tools.TelekenisisEnchant;
 import net.alwayshak.util.Materials;
 import net.alwayshak.util.Utils;
 import net.md_5.bungee.api.ChatMessageType;
@@ -15,7 +17,6 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
@@ -35,7 +36,7 @@ public class MinerAbility extends Ability {
         this.shift = false;
         this.toggled = true;
 
-        addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
+        //addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
     }
 
     @EventHandler
@@ -91,7 +92,12 @@ public class MinerAbility extends Ability {
             for(Block br : blocksToBeRemoved) {
                 if(Materials.can3x3Mine(br, hand)) {
                     Materials.damageItem(hand);
-                    br.breakNaturally(hand);
+                    br.setType(Material.AIR);
+                    //p.getHandle().playerInteractManager.breakBlock();
+                    if(hand.containsEnchantment(TelekenisisEnchant.ENCHANT)) {
+                        br.setType(Material.AIR);
+                    } else
+                        br.breakNaturally(hand);
                 }
             }
         }

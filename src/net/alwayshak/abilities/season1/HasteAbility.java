@@ -1,11 +1,10 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
+import net.alwayshak.abilities.Ability;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
-import java.util.UUID;
 
 public class HasteAbility
         extends Ability {

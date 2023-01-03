@@ -1,6 +1,7 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
 import net.alwayshak.Core;
+import net.alwayshak.abilities.Ability;
 import net.alwayshak.events.PlayerHandler;
 import net.alwayshak.util.Materials;
 import net.md_5.bungee.api.ChatMessageType;
@@ -19,7 +20,6 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class VeinMinerAbility extends Ability {
     private boolean shift;

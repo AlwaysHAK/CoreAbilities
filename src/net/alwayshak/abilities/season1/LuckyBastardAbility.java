@@ -1,13 +1,12 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
+import net.alwayshak.abilities.Ability;
 import net.alwayshak.util.Materials;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-
-import java.util.UUID;
 
 
 public class LuckyBastardAbility

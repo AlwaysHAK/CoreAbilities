@@ -1,20 +1,12 @@
-package net.alwayshak.abilities;
-import net.alwayshak.Core;
-import org.bukkit.Location;
-import org.bukkit.World;
+package net.alwayshak.abilities.season2;
+
+import net.alwayshak.abilities.Ability;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerToggleSneakEvent;
-import org.bukkit.metadata.FixedMetadataValue;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 public class PhaserAbility extends Ability {
 

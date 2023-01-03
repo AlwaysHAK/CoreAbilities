@@ -1,5 +1,6 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
+import net.alwayshak.abilities.Ability;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.entity.EntityType;
@@ -7,8 +8,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityTargetEvent;
-
-import java.util.UUID;
 
 
 public class CatAbility extends Ability {

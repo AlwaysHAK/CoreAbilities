@@ -9,35 +9,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Added some stuff">
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/CutCleanEnchant.java" afterDir="false" />
+    <list default="true" id="faf34aa6-3658-4b77-951c-43a903a05f2b" name="Changes" comment="Did things">
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantCMD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/ExperienceEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/shooter/ExplosiveTipEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/shooter/FrostArrowEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/shooter/ZeroGravityArrowEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/AutoSmeltEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/ObsidianDestroyerEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/TelekenisisEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/ViperEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/webserver/WebServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/alwayshak/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/AbilityHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/BigBoyAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/BigBoyAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/CatAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/CatAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ConduitAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/ConduitAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/FeedAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/FeedAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/HasteAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/HasteAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/InvKeepAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/InvKeepAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/InvisibilityAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/InvisibilityAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/LuckyBastardAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/LuckyBastardAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/MagnetAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/MagnetAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/MinerAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/MinerAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/PhaserAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/PhaserAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ReducedCooldownAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/ReducedCooldownAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/TeleportBowAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/TeleportBowAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/ThothAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ToolRegenAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/ToolRegenAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/VayuAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/VayuAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/VeinMinerAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season1/VeinMinerAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/VexAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/VexAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ZeusAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/ZeusAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/AddAbilityCMD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/death/KillAnvilCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/death/KillAnvilCosmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/gui/CosmeticsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/gui/CosmeticsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillFoxCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillFoxCosmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillHAKCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillHAKCosmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillOazzCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/special/KillOazzCosmetic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/CustomEnchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/EnchantHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/CustomEnchants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/EnchantmentWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/commands/CustomEnchantmentsCMD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/AnvilHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/CutCleanEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/ExplosiveTipEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/LevelHungerUpEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/ObliterateEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/old/events/PosionProtectionEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/CutCleanEnchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/CutCleanEnchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/events/PlayerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/events/PlayerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/lootcrate/TokenCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/lootcrate/TokenCMD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/util/Materials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/util/Materials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/util/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <list id="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" name="Changes by ingoj" comment="Did some stuff again">
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitAngryCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitAngryCosmetic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/shooter/BurstEnchantment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/shooter/LightningEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/OxegeniateEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/ReplantEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/AquaAspectEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/BlindEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/ConfusionEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/EnderSlayerEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/NightOwlEnchant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/weapons/VampireEnchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/BigBoyAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/BigBoyAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/abilities/ThothAbility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/ThothAbility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/CutCleanEnchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/CutCleanEnchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
-    <list id="72892b11-6ca1-4b6b-8003-0c15e2b60575" name="Changes by troyh" comment="">
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/death/KillExplosionCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/elytra/ElytraEndCosmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/alwayshak/cosmetics/hit/HitBubblesCosmetic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/alwayshak/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/alwayshak/Core.java" afterDir="false" />
-    </list>
+    <list id="72892b11-6ca1-4b6b-8003-0c15e2b60575" name="Changes by troyh" comment="Did things" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,27 +95,49 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/net/alwayshak/cheat/CheatMenuCMD.java">
+    <file path="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/BigBoyAbility.java">
       <ranges>
-        <range start1="4" end1="4" start2="4" end2="5" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="13" end1="15" start2="14" end2="22" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="17" end1="25" start2="24" end2="25" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
-        <range start1="34" end1="34" start2="34" end2="45" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="0" end1="1" start2="0" end2="1" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="2" end1="2" start2="2" end2="3" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="8" end1="12" start2="9" end2="9" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/net/alwayshak/Core.java">
+    <file path="$PROJECT_DIR$/src/plugin.yml">
       <ranges>
-        <range start1="11" end1="11" start2="11" end2="12" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
-        <range start1="18" end1="18" start2="19" end2="20" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
-        <range start1="24" end1="26" start2="26" end2="26" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="44" end1="45" start2="44" end2="44" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="50" end1="50" start2="49" end2="50" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="70" end1="71" start2="70" end2="71" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="146" end1="146" start2="146" end2="147" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
-        <range start1="153" end1="153" start2="154" end2="155" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
-        <range start1="183" end1="183" start2="185" end2="186" changelist="72892b11-6ca1-4b6b-8003-0c15e2b60575" />
-        <range start1="190" end1="191" start2="193" end2="193" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
-        <range start1="194" end1="201" start2="196" end2="197" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="10" end1="12" start2="10" end2="12" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="20" end1="22" start2="20" end2="20" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="23" end1="25" start2="21" end2="22" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/net/alwayshak/enchantments/enchants/tools/CutCleanEnchant.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="3" end1="3" start2="3" end2="6" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="4" end1="4" start2="7" end2="11" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="8" end1="10" start2="15" end2="19" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="17" end1="17" start2="26" end2="31" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="20" end1="20" start2="34" end2="40" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="21" end1="21" start2="41" end2="51" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="22" end1="22" start2="52" end2="53" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/net/alwayshak/abilities/season2/ThothAbility.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="ae3bd18d-237a-4e6e-97df-d2e0ca2b54c5" />
+        <range start1="3" end1="4" start2="3" end2="4" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="5" end1="6" start2="5" end2="5" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="8" end1="11" start2="7" end2="7" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="15" end1="16" start2="11" end2="12" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="17" end1="18" start2="13" end2="13" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="19" end1="20" start2="14" end2="14" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="21" end1="22" start2="15" end2="15" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="23" end1="24" start2="16" end2="20" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="29" end1="29" start2="25" end2="29" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="32" end1="33" start2="32" end2="32" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="34" end1="34" start2="33" end2="56" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="38" end1="38" start2="60" end2="67" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="41" end1="41" start2="70" end2="86" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
+        <range start1="43" end1="44" start2="88" end2="89" changelist="faf34aa6-3658-4b77-951c-43a903a05f2b" />
       </ranges>
     </file>
   </component>
@@ -91,19 +154,26 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;GenerateAntBuildDialog.backupFiles&quot;: &quot;true&quot;,
+    &quot;GenerateAntBuildDialog.forceTargetJdk&quot;: &quot;true&quot;,
+    &quot;GenerateAntBuildDialog.generateSingleFile&quot;: &quot;true&quot;,
+    &quot;GenerateAntBuildDialog.inclineRuntiemClasspath&quot;: &quot;true&quot;,
+    &quot;GenerateAntBuildDialog.outputFileNameProperty&quot;: &quot;coreabilities&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hedze/Documents/Testserver/spigot-1.19.2.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hedze/Documents/GitHub/CoreAbilities/coreabilities.xml&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -114,8 +184,12 @@
       <recent name="net.alwayshak.enchantments.old.events" />
       <recent name="net.alwayshak.enchantments" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.alwayshak.enchantments.enchants" />
+      <recent name="net.alwayshak.enchantments.enchants.weapons" />
+    </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Unnamed">
+  <component name="RunManager" selected="Shell Script.Upload">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="CoreAbilities" />
       <method v="2">
@@ -130,9 +204,25 @@
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <method v="2" />
     </configuration>
+    <configuration name="Upload" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../../Testserver/plugins/upload.bat" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Testserver/plugins" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JAR Application.Unnamed" />
+      <item itemvalue="Shell Script.Upload" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -161,6 +251,31 @@
       <workItem from="1672194968298" duration="536000" />
       <workItem from="1672195561733" duration="122000" />
       <workItem from="1672195719130" duration="474000" />
+      <workItem from="1672196382021" duration="209000" />
+      <workItem from="1672196778860" duration="19000" />
+      <workItem from="1672196810088" duration="1414000" />
+      <workItem from="1672198299399" duration="813000" />
+      <workItem from="1672199132468" duration="289000" />
+      <workItem from="1672199599842" duration="1828000" />
+      <workItem from="1672235350136" duration="1329000" />
+      <workItem from="1672252022687" duration="2702000" />
+      <workItem from="1672254762636" duration="3129000" />
+      <workItem from="1672258064653" duration="2462000" />
+      <workItem from="1672260635052" duration="3839000" />
+      <workItem from="1672267617209" duration="740000" />
+      <workItem from="1672268432202" duration="920000" />
+      <workItem from="1672269400577" duration="796000" />
+      <workItem from="1672270233087" duration="110000" />
+      <workItem from="1672270373770" duration="74000" />
+      <workItem from="1672270534690" duration="207000" />
+      <workItem from="1672270798082" duration="84000" />
+      <workItem from="1672270923841" duration="117000" />
+      <workItem from="1672271128496" duration="62000" />
+      <workItem from="1672271193333" duration="1908000" />
+      <workItem from="1672273149831" duration="1775000" />
+      <workItem from="1672322825793" duration="2348000" />
+      <workItem from="1672327938123" duration="2493000" />
+      <workItem from="1672332254526" duration="16048000" />
     </task>
     <task id="LOCAL-00001" summary="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)">
       <created>1671323817694</created>
@@ -204,7 +319,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672019751592</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Did things">
+      <created>1672196410976</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672196410976</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Did some stuff again">
+      <created>1672196419280</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672196419280</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Did things">
+      <created>1672196430384</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672196430384</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,8 +361,9 @@
     <MESSAGE value="Added decompiled CoreAbilities plugin so we don't have to rewrite it :)" />
     <MESSAGE value="Removed Ability Assignments" />
     <MESSAGE value="Added the durability drain on the MinerAbility" />
-    <MESSAGE value="Did some stuff again" />
     <MESSAGE value="Added some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some stuff" />
+    <MESSAGE value="Did some stuff again" />
+    <MESSAGE value="Did things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did things" />
   </component>
 </project>

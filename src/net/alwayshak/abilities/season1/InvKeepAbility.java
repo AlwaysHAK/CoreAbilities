@@ -1,13 +1,12 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
+import net.alwayshak.abilities.Ability;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
-
-import java.util.UUID;
 
 public class InvKeepAbility
         extends Ability {

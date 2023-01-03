@@ -1,8 +1,8 @@
 package net.alwayshak;
 
 import net.alwayshak.abilities.*;
-import net.alwayshak.cheat.CheatGUI;
-import net.alwayshak.cheat.CheatMenuCMD;
+import net.alwayshak.abilities.season1.*;
+import net.alwayshak.abilities.season2.*;
 import net.alwayshak.cheat.ResetCosmeticsCMD;
 import net.alwayshak.config.ConfigHandler;
 import net.alwayshak.config.ReloadConfigCMD;
@@ -23,7 +23,12 @@ import net.alwayshak.cosmetics.projectile.*;
 import net.alwayshak.cosmetics.special.KillFoxCosmetic;
 import net.alwayshak.cosmetics.special.KillHAKCosmetic;
 import net.alwayshak.cosmetics.special.KillOazzCosmetic;
+import net.alwayshak.enchantments.EnchantCMD;
 import net.alwayshak.enchantments.EnchantHandler;
+import net.alwayshak.enchantments.enchants.ExperienceEnchant;
+import net.alwayshak.enchantments.enchants.shooter.*;
+import net.alwayshak.enchantments.enchants.tools.*;
+import net.alwayshak.enchantments.enchants.weapons.*;
 import net.alwayshak.events.EntityHandler;
 import net.alwayshak.events.PlayerHandler;
 import net.alwayshak.lootcrate.Lootcrate;
@@ -31,6 +36,7 @@ import net.alwayshak.lootcrate.LootcrateCMD;
 import net.alwayshak.lootcrate.TokenCMD;
 import net.alwayshak.notes.NotesCMD;
 import net.alwayshak.notes.NotesGUI;
+import net.alwayshak.webserver.WebServer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.PluginCommand;
@@ -43,6 +49,8 @@ public class Core extends JavaPlugin {
     private AbilityHandler abilityHandler;
     private CosmeticsHandler cosmeticHandler;
 
+    private WebServer webServer;
+
     public void onEnable() {
         handleConfig();
         handleAbilities();
@@ -52,6 +60,8 @@ public class Core extends JavaPlugin {
         handleNotes();
         handleEvents();
 
+        webServer = new WebServer();
+        webServer.start();
 
         for (Player p : Bukkit.getOnlinePlayers()) {
             this.cosmeticHandler.loadCosmetics(p);
@@ -64,19 +74,21 @@ public class Core extends JavaPlugin {
             this.cosmeticHandler.saveCosmetics(p);
             PlayerHandler.saveTokens(p);
         }
+        webServer.stop();
     }
 
     private void handleCommands() {
         registerCommand("reloadconfig", new ReloadConfigCMD(), "coreabilities.reload");
-        registerCommand("cheatmenu", new CheatMenuCMD(new CheatGUI()), "coreabilities.cheatmenu");
         registerCommand("tokens", new TokenCMD());
         registerCommand("lootcrate", new LootcrateCMD());
         registerCommand("resetcosmetics", new ResetCosmeticsCMD());
+        registerCommand("customenchant", new EnchantCMD());
     }
 
     private void handleAbilities() {
         abilityHandler = new AbilityHandler(this);
         Bukkit.getPluginManager().registerEvents(abilityHandler, this);
+        /*
         abilityHandler.registerAbility(new MagnetAbility("Magnet", "You auto-pickup items you mine."));
         abilityHandler.registerAbility(new CatAbility("Cat", "You take half fall damage and creepers don't target you."));
         abilityHandler.registerAbility(new VeinMinerAbility("VeinMiner", "Vein mines ores and trees."));
@@ -90,6 +102,7 @@ public class Core extends JavaPlugin {
         abilityHandler.registerAbility(new HasteAbility("Haste", "You have permanent haste!"));
         abilityHandler.registerAbility(new FeedAbility("Feed", "You get fed"));
         abilityHandler.registerAbility(new PhaserAbility("Phaser", "You can phase through blocks"));
+        */
         abilityHandler.registerAbility(new VayuAbility("Vayu", "You have can double jump"));
         abilityHandler.registerAbility(new BigBoyAbility("Big Boy", "You get more health and do more damage"));
         abilityHandler.registerAbility(new ZeusAbility("Zeus", "You strike lightning in an x radius"));
@@ -190,11 +203,30 @@ public class Core extends JavaPlugin {
     private void handleEvents() {
         Bukkit.getPluginManager().registerEvents(new PlayerHandler(), this);
         Bukkit.getPluginManager().registerEvents(new EntityHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new CheatGUI(), this);
     }
 
     private void handleEnchantments() {
         //enchantHandler = new EnchantHandler();
+        EnchantHandler handler = new EnchantHandler();
+        handler.register(new TelekenisisEnchant("telekenisis", "Telekenisis","Grab blocks into your inventory", 1));
+        handler.register(new AutoSmeltEnchant("autosmelt", "Auto Smelt", "Smelt items automaticly when mined", 1));
+        handler.register(new ExplosiveTipEnchant("explosive_tip", "Explosive Tip","Explode on impact", 1));
+        handler.register(new BurstEnchantment("burst", "Burst","Shoot more arrows", 3));
+        handler.register(new ZeroGravityArrowEnchant("zero_gravity", "Zero Gravity","Give shot arrows not gravity", 1));
+        handler.register(new CutCleanEnchant("cut_clean", "Cut Clean","Break glass fast", 1));
+        handler.register(new ObsidianDestroyerEnchant("obsidian_destroyer", "Obsidian Destroyer","Break some Obsidian instant", 1));
+        handler.register(new FrostArrowEnchant("frost", "Frost","Give the entity hit the frost and slowness effect", 1));
+        handler.register(new ViperEnchant("viper", "Viper","Chance to give attacked entity poison", 3));
+        handler.register(new VampireEnchant("vampire", "Vampire","Get health back when hitting something", 7));
+        handler.register(new ConfusionEnchant("confusion", "Confusion","Chance to give attacked entity nausia", 3));
+        handler.register(new BlindEnchant("blind", "Blind","Chance to give attacked entity blindness", 3));
+        handler.register(new OxegeniateEnchant("oxegeniate", "Oxegeniate","Get oxygen while mining underwater", 1));
+        handler.register(new ExperienceEnchant("experience", "Experience","Get more experience points", 3));
+        handler.register(new LightningEnchant("lightning", "Lightning","Chance to spawn lightning on hit", 3));
+        handler.register(new ReplantEnchant("replant", "Replant","Replant crops when harvested", 1));
+        handler.register(new AquaAspectEnchant("aqua_aspect", "Aqua Aspect","Do more damage against anti-water mobs", 2));
+        handler.register(new EnderSlayerEnchant("ender_slayer", "Ender Slayer","Do more damage against end mobs", 5));
+        handler.register(new NightOwlEnchant("night_owl", "Night Owl","Do more damage against mobs at night", 5));
     }
 
     private void handleNotes() {

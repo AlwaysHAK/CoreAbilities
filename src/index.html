@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Enchantments and Abilities</title>
+      <style>
+          body {
+              font-family: sans-serif;
+              display: flex;
+              justify-content: center;
+              background-color: #222;
+          }
+          ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+          }
+          li {
+              margin: 20px 0;
+          }
+          h1 {
+              font-size: 2em;
+              text-align: center;
+              margin: 10px 0;
+              color: #fff;
+          }
+          h2 {
+              font-size: 1.5em;
+              color: #fff;
+              margin: 0;
+          }
+          p {
+              font-size: 1.2em;
+              color: #ccc;
+          }
+          .enchantments {
+              flex: 1;
+              border: 1px solid #444;
+              padding: 20px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              border-radius: 4px;
+              background-color: #333;
+          }
+          .abilities {
+              flex: 1;
+              border: 1px solid #444;
+              padding: 20px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              border-radius: 4px;
+              background-color: #333;
+          }
+          h2 + ul {
+              margin-top: -10px;
+          }
+      </style>
+  </head>
+  <body>
+    <div class=\enchantments\>
+          <h1>Enchantments</h1>
+          <ul>
+              %enchantments
+          </ul>
+        </div>
+    <div class=\abilities\>
+          <h1>Abilities</h1>
+          <ul>
+              %abilities
+          </ul>
+        </div>
+  </body>
+
+</html>

@@ -1,6 +1,7 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season2;
 
 import net.alwayshak.Core;
+import net.alwayshak.abilities.Ability;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -8,11 +9,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
-import java.util.UUID;
 
 public class VexAbility extends Ability {
 

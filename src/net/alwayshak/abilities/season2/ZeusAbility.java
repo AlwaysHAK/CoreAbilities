@@ -1,7 +1,7 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season2;
 
+import net.alwayshak.abilities.Ability;
 import org.bukkit.World;
-import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,7 +12,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
-import java.util.UUID;
 
 public class ZeusAbility extends Ability implements Listener {
 

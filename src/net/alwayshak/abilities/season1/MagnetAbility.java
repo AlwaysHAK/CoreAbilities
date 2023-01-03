@@ -1,5 +1,6 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
+import net.alwayshak.abilities.Ability;
 import org.bukkit.block.Container;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -7,7 +8,6 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ListIterator;
 import java.util.Map;
-import java.util.UUID;
 
 
 public class MagnetAbility

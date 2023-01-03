@@ -14,6 +14,17 @@ import java.util.Random;
 
 
 public class Materials {
+
+    public static boolean isSword(ItemStack stack) {
+        Material t = stack.getType();
+        if (t == Material.WOODEN_SWORD) return true;
+        if (t == Material.STONE_SWORD) return true;
+        if (t == Material.IRON_SWORD) return true;
+        if (t == Material.GOLDEN_SWORD) return true;
+        if (t == Material.DIAMOND_SWORD) return true;
+        return t == Material.NETHERITE_SWORD;
+    }
+
     public static boolean isAxe(ItemStack stack) {
         Material t = stack.getType();
         if (t == Material.WOODEN_AXE) return true;
@@ -170,21 +181,27 @@ public class Materials {
         if(mat == Material.MELON_SEEDS) return true;
         if(mat == Material.MELON_STEM) return true;
         if(mat == Material.PUMPKIN) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
-        if(mat == Material.WHEAT) return true;
+        if(mat == Material.COCOA_BEANS) return true;
+        if(mat == Material.COCOA) return true;
+
         return false;
     }
+
+    public static boolean giveXp(Block stack) {
+        Material mat = stack.getType();
+        if (mat == Material.COAL_ORE) return true;
+        if (mat == Material.DEEPSLATE_COAL_ORE) return true;
+        if (mat == Material.LAPIS_ORE) return true;
+        if (mat == Material.DEEPSLATE_LAPIS_ORE) return true;
+        if (mat == Material.REDSTONE_ORE) return true;
+        if (mat == Material.DEEPSLATE_REDSTONE_ORE) return true;
+        if (mat == Material.DIAMOND_ORE) return true;
+        if (mat == Material.DEEPSLATE_DIAMOND_ORE) return true;
+        if (mat == Material.EMERALD_ORE) return true;
+        if (mat == Material.DEEPSLATE_EMERALD_ORE) return true;
+        return mat == Material.NETHER_QUARTZ_ORE;
+    }
+
 
     public static boolean damageItem(ItemStack i) {
         if (i == null) return false;

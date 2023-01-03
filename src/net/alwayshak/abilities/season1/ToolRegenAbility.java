@@ -1,14 +1,11 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season1;
 
 import net.alwayshak.Core;
+import net.alwayshak.abilities.Ability;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.Plugin;
-
-import java.util.UUID;
 
 public class ToolRegenAbility extends Ability {
     public ToolRegenAbility(String name, String description) {

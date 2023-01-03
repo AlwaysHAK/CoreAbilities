@@ -1,47 +1,92 @@
 package net.alwayshak.abilities;
 
 import net.alwayshak.Core;
-import net.alwayshak.util.Materials;
+import net.alwayshak.abilities.Ability;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.block.Block;
-import org.bukkit.block.data.Ageable;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
-import org.bukkit.material.Crops;
 import org.bukkit.plugin.Plugin;
-import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.util.Vector;
-import org.checkerframework.checker.units.qual.C;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
 
 public class ThothAbility extends Ability {
 
     private boolean shift = false;
 
+    private HashMap<UUID, ArrayList<Location>> locations = new HashMap<>();
+
+    boolean onCooldownTP = false;
+
     public ThothAbility(String name, String description) {
         super(name, description);
         addMember(UUID.fromString("ac4cbc63-386f-4b4c-8a70-3e54caba0df9"));
-        //addMember(UUID.fromString("5c46091f-8b93-48a2-97c1-62d243dcc430"));
 
+        for(Player p : Bukkit.getOnlinePlayers()) {
+            if (getMembers().contains(p.getUniqueId())) {
+                locations.put(p.getUniqueId(), new ArrayList<>());
+            }
+        }
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Core.getPlugin(Core.class), new Runnable() {
+            @Override
+            public void run() {
+                for (UUID uuid : ThothAbility.super.getMembers()) {
+                    if (Bukkit.getPlayer(uuid) == null) {
+                        locations.remove(uuid);
+                        continue;
+                    }
+                    ArrayList<Location> loc = locations.get(uuid);
+                    if (loc != null) {
+                        loc.add(Bukkit.getPlayer(uuid).getLocation());
+                        if (loc.size() > 10) {
+                            loc.remove(0);
+                        }
+                    }
+                }
+            }
+        }, 0l, 20l);
     }
 
     public boolean onCooldown = false;
 
     @EventHandler
+    public void onJoin(PlayerJoinEvent e) {
+        if (getMembers().contains(e.getPlayer().getUniqueId())) {
+            locations.put(e.getPlayer().getUniqueId(), new ArrayList<>());
+        }
+    }
+
+    @EventHandler
     public void onSneak(PlayerToggleSneakEvent e) {
         if (getMembers().contains(e.getPlayer().getUniqueId()) && e.isSneaking()) {
+            if (e.isSneaking() && !e.getPlayer().isOnGround()) {
+                if (!onCooldownTP && locations.get(e.getPlayer().getUniqueId()) != null) {
+                    if (locations.get(e.getPlayer().getUniqueId()).size() == 10) {
+                        e.getPlayer().teleport(locations.get(e.getPlayer().getUniqueId()).get(0));
+                        onCooldownTP = true;
+                        Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getPlugin(Core.class), new Runnable() {
+                            @Override
+                            public void run() {
+                                onCooldownTP = false;
+                            }
+                        }, 120l);
+                    }
+                } else
+                    e.getPlayer().sendMessage("You're on cooldown");
+
+            }
             if (!this.shift) {
                 this.shift = true;
-                Bukkit.getScheduler().scheduleSyncDelayedTask((Plugin) Core.getPlugin(Core.class), new Runnable() {
+                Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getPlugin(Core.class), new Runnable() {
                     public void run() {
                         ThothAbility.this.shift = false;
                     }

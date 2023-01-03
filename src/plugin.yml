@@ -8,8 +8,8 @@ main: net.alwayshak.Core
 commands:
   cosmetics:
     aliases: [c, cos]
-  customenchantments:
-    aliases: [ce, customench, customenchantment]
+  customenchant:
+    aliases: [ce, customench, customenchantment, cenchant]
   notes:
     aliases: [coords]
   reloadconfig:
