@@ -18,10 +18,7 @@ commands:
     aliases: [token]
   lootcrate:
     aliases: [lc, loot]
-  cheatmenu:
-    aliases: [cm, cheat, adminmenu, am]
   resetcosmetics:
-    aliases: [rc, resetc, cosmeticreset, clearcosmetics, cc]
-  cench:
+    aliases: [rc, resetc, cosmeticreset, clearcosmetics]
 
 

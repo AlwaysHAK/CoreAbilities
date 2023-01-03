@@ -1,4 +1,4 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season2;
 
 import net.alwayshak.Core;
 import net.alwayshak.abilities.Ability;

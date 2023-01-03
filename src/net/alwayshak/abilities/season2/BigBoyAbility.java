@@ -1,5 +1,6 @@
-package net.alwayshak.abilities;
+package net.alwayshak.abilities.season2;
 
+import net.alwayshak.abilities.Ability;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;

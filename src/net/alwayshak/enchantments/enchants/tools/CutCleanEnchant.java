@@ -1,7 +1,14 @@
 package net.alwayshak.enchantments.enchants.tools;
 
 import net.alwayshak.enchantments.CustomEnchant;
+import net.alwayshak.util.Materials;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class CutCleanEnchant extends CustomEnchant {
@@ -17,6 +24,11 @@ public class CutCleanEnchant extends CustomEnchant {
     }
 
     public boolean canEnchantItem(ItemStack itemStack) {
+        for(Enchantment ench : itemStack.getEnchantments().keySet()) {
+            if(conflictsWith(ench))
+                return false;
+        }
+        if (itemStack.getType() == Material.SHEARS) return true;
         return false;
     }
 
